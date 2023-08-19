@@ -4,15 +4,6 @@ void main() {
   runApp(const MyApp());
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -21,18 +12,38 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My First App!'),
+          title: const Text('My App!'),
           centerTitle: true,
         ),
-        body: const Center(
-          child: Text(
-            'Hello World',
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              fontFamily: 'poppins',
-              color: Colors.red,
+        body: Center(
+          // child: Text(
+          //   'Hello World',
+          //   style: TextStyle(
+          //     fontSize: 20.0,
+          //     fontWeight: FontWeight.bold,
+          //     letterSpacing: 2.0,
+          //     fontFamily: 'poppins',
+          //     color: Colors.red,
+          //   ),
+          // ),
+          // child: Image.asset('assets/download (1).jpg'),
+          // child: Icon(
+          //   Icons.youtube_searched_for_outlined,
+          //   color: Colors.red,
+          //   size: 30 ,
+          // ),
+          child: TextButton.icon(
+            style: const ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll<Color>(Colors.yellow),
+            ),
+            onPressed: () {},
+            label: const Text(
+              'Mail Me',
+              style: TextStyle(color: Colors.black),
+            ),
+            icon: const Icon(
+              Icons.mail,
+              color: Colors.black,
             ),
           ),
         ),
